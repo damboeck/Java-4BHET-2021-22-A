@@ -14,6 +14,6 @@ public class Widerstand {
         // Berechnung
         rp = r1*r2/(r1+r2);
         rs = r1+r2;
-        System.out.printf("Parallel: %f Serie: %f\n",rp,rs);
+        System.out.printf("Parallel: %.2f Serie: %f\n",rp,rs);
     }
 }
