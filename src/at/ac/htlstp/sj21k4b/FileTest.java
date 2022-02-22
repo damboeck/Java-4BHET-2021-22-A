@@ -3,7 +3,7 @@ package at.ac.htlstp.sj21k4b;
 import java.io.File;
 import java.io.IOException;
 
-public class MasterTest {
+public class FileTest {
 
     public static void main(String[] args) {
         File file = new File("data/test.txt");
