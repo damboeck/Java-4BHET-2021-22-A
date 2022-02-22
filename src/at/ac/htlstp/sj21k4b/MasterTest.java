@@ -5,28 +5,14 @@ import java.io.IOException;
 
 public class MasterTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        File directory = new File("data");
+        if (!directory.exists()) directory.mkdirs();
         File file = new File("data/test.txt");
         if (file.exists()) {
             System.out.println("File exists!");
-            file.delete();
         } else {
-            try {
-                file.createNewFile();
-                System.out.println("File created!");
-            } catch (IOException e) {
-                File directory = new File("data");
-                if (directory.exists()) {
-                    System.out.println("File cannot be created!");
-                } else {
-                    directory.mkdirs();
-                    try {
-                        file.createNewFile();
-                    } catch (IOException ex) {
-                        System.out.println("File cannot be created!");
-                    }
-                }
-            }
+            file.createNewFile();
         }
     }
 
