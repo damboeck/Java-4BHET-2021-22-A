@@ -6,11 +6,17 @@ import java.io.IOException;
 
 public class FileWriteTest {
 
+    public static final String FILENAME = "data/test.txt";
+
     public static void main(String[] args) throws IOException {
         File data = new File("data");
         if (!data.exists()) data.mkdirs();
-        File file = new File("data/test.txt");
+        File file = new File(FILENAME);
         FileWriter fileWriter = new FileWriter(file);
+        fileWriter.write("Hallo ");
+        fileWriter.write("Welt\n");
+        fileWriter.write("2.Zeile\n");
+        fileWriter.close();
     }
 
 }
